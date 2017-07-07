@@ -1,0 +1,5 @@
+Use editable tag to specify modifiable content.
+Parse file into just that content
+allow editing of the content
+rework back into file
+save/send in correct format 
