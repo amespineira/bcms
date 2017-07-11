@@ -30,13 +30,18 @@ function parser(input, startTag, endTag){
   return stored
 }
 var stTag='<editable>';
-var eTag='</editable>'
+var eTag='</editable>';
+
 $(document).ready(function(){
     $("#fetch").click(function(){
         // make ajax request
         console.log('click fired');
         var url=$('#url').val();
         console.log(url);
+        $.get(url,function(data, status){
+          var editableContent=parser(data, stTag, eTag);
+          console.log(editableContent);
+        });
     });
 });
 // console.log(parser('atxxxbaatsssbaaaaatooooob', 't', 'b'))
